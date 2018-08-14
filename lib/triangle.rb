@@ -17,11 +17,7 @@ class Triangle
       #   puts error.message
       # end
     elsif (@lengthA + @lengthB) < @lengthC
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
+      raise TriangleError
     elsif @lengthA == @lengthB && @lengthB == @lengthC
       return :equilateral
     elsif @lengthA == @lengthB && @lengthA != @lengthC
