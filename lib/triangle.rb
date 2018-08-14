@@ -16,11 +16,11 @@ class Triangle
       # rescue TriangleError => error
       #   puts error.message
       # end
-    elsif (@lengthA + @lengthB) < @lengthC
+    elsif (@lengthA + @lengthB) <= @lengthC
       raise TriangleError
-    elsif (@lengthC + @lengthB) < @lengthA
+    elsif (@lengthC + @lengthB) <= @lengthA
       raise TriangleError
-    elsif (@lengthA + @lengthC) < @lengthB
+    elsif (@lengthA + @lengthC) <= @lengthB
       raise TriangleError
     elsif @lengthA == @lengthB && @lengthB == @lengthC
       return :equilateral
