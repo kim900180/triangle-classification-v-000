@@ -35,9 +35,9 @@ class Triangle
   end
 
   class TriangleError < StandardError
-    def message
-      "You must give lengths that form a triangle"
-    end
+    # def message
+    #   "You must give lengths that form a triangle"
+    # end
   end
 
 end
