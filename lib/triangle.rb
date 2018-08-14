@@ -2,8 +2,6 @@ class Triangle
   # write code here
   attr_accessor :lengthA, :lengthB, :lengthC
 
-  @@equilateral
-
   def initialize(lengthA, lengthB, lengthC)
     @lengthA = lengthA
     @lengthB = lengthB
@@ -21,6 +19,12 @@ class Triangle
       return :isosceles
     elsif @lengthA != @lengthB && @lengthA != @lengthC
       return :scalene
+    elsif @lengthA == 0 || @lengthB == 0 || @lengthC == 0
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
     end
   end
 
