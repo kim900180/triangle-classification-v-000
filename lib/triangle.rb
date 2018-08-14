@@ -18,6 +18,10 @@ class Triangle
       # end
     elsif (@lengthA + @lengthB) < @lengthC
       raise TriangleError
+    elsif (@lengthC + @lengthB) < @lengthA
+      raise TriangleError
+    elsif (@lengthA + @lengthC) < @lengthB
+      raise TriangleError
     elsif @lengthA == @lengthB && @lengthB == @lengthC
       return :equilateral
     elsif @lengthA == @lengthB && @lengthA != @lengthC
