@@ -15,7 +15,7 @@ class Triangle
       rescue TriangleError => error
         puts error.message
       end
-    elsif ()@lengthA + @lengthB) < @lengthC
+    elsif (@lengthA + @lengthB) < @lengthC
       begin
         raise TriangleError
       rescue TriangleError => error
