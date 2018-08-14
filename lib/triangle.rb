@@ -9,7 +9,13 @@ class Triangle
   end
 
   def kind
-    if @lengthA == @lengthB && @lengthB == @lengthC
+    if @lengthA <= 0 || @lengthB <= 0 || @lengthC <= 0
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
+    elsif @lengthA == @lengthB && @lengthB == @lengthC
       return :equilateral
     elsif @lengthA == @lengthB && @lengthA != @lengthC
       return :isosceles
@@ -19,12 +25,6 @@ class Triangle
       return :isosceles
     elsif @lengthA != @lengthB && @lengthA != @lengthC
       return :scalene
-    elsif @lengthA <= 0 || @lengthB <= 0 || @lengthC <= 0
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
     end
   end
 
